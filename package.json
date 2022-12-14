@@ -2,7 +2,8 @@
   "scripts": {
     "start": "npx babel . --out-dir=compiled --presets=@babel/preset-react --ignore=node_modules,compiled --source-maps=inline --watch",
     "webpack": "webpack",
-    "react": "webpack serve"
+    "react": "webpack serve",
+    "server-dev": "npx nodemon server/server.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -10,13 +11,14 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
-    "css-loader": "^1.0.0",
+    "css-loader": "^6.7.2",
     "style-loader": "^0.23.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
