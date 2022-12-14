@@ -9,5 +9,20 @@
   "files.trimTrailingWhitespace": true,
   "javascript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "favorites.sortOrder": "ASC",
+  "favorites.resources": [
+    {
+      "filePath": "webpack.config.js",
+      "group": "Default"
+    },
+    {
+      "filePath": ".gitignore",
+      "group": "Default"
+    },
+    {
+      "filePath": "_PRESS-RELEASE.md",
+      "group": "Default"
+    }
+  ]
 }
