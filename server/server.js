@@ -1,8 +1,11 @@
 const express = require('express');
-let app = express();
+const app = express();
+const path = require('path');
+const router = express.Router();
+const webpage = 'client/dist/index.html'
 
 
-app.use(express.static(__dirname + 'client/dist/index.html'));
+app.use(express.static('client/dist'));
 app.use(express.json());
 
 let port = 3000;
@@ -16,6 +19,9 @@ app.post('/', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  console.log(req);
-  res.send('GET request to homepage')
+  res.send('here')
 })
+
+// app.get('/',function(req,res){
+//   res.sendFile(`${webpage}`);
+// });
