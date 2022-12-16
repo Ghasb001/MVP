@@ -9,8 +9,8 @@ var App = () => {
     return(
       <div className="App">
         <h1> RPP2209 Github </h1>
-        <div className="col-md-5">
-          <StudentList list={cohortStudents} />
+        <div className="classRoom">
+          <StudentList list={cohortStudents} link={cohortStudents}/>
         </div>
       </div>
     );
