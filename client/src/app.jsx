@@ -6,13 +6,16 @@ import Helpers from './helpers.js';
 
 var App = () => {
   var cohortStudents = Helpers.students;
-  var randomName = cohortStudents[Math.floor(Math.random() * cohortStudents.length)];
+  var generate = function () {
+    var randomName = cohortStudents[Math.floor(Math.random() * cohortStudents.length)];
+    return randomName.name;
+  }
 
     return(
       <div className="App">
         <h1> RPP2209 Github </h1>
         <button type="button" onClick={() => {
-          alert(randomName.name)
+          alert(generate())
         }}>Random Name Picker</button>
         <div className="classRoom">
           <StudentList list={cohortStudents} link={cohortStudents}/>
