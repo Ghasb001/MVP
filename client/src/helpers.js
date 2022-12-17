@@ -1,3 +1,5 @@
+
+
 var Helpers = {
   students: [{
     name: 'Alex Chaidez',
@@ -77,5 +79,7 @@ var Helpers = {
     link: 'https://github.com/XQ2013'
   }]
 }
+
+//module.exports.connection
 
 export default Helpers;

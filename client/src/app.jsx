@@ -17,6 +17,9 @@ var App = () => {
         <button type="button" onClick={() => {
           alert(generate())
         }}>Random Name Picker</button>
+        <button type="button" onClick={() => {
+          window.open('https://github.com/orgs/hackreactor/teams/students-rpp2209/repositories')
+        }}>Cohort Repos</button>
         <div className="classRoom">
           <StudentList list={cohortStudents} link={cohortStudents}/>
         </div>
