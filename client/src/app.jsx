@@ -8,18 +8,21 @@ var App = () => {
   var cohortStudents = Helpers.students;
   var generate = function () {
     var randomName = cohortStudents[Math.floor(Math.random() * cohortStudents.length)];
-    return randomName.studentName;
+    return randomName;
   }
 
     return(
       <div className="App">
         <h1> RPP2209 Github </h1>
         <button type="button" onClick={() => {
-          alert(generate())
+          alert(generate().studentName)
         }}>Random Name Picker</button>
         <button type="button" onClick={() => {
           window.open('https://github.com/orgs/hackreactor/teams/students-rpp2209/repositories')
         }}>Cohort Repos</button>
+        <button type="button" onClick={() => {
+          window.open(generate().gitUrl)
+        }}>Feeling Lucky?</button>
         <div className="classRoom">
           <StudentList list={cohortStudents} url={cohortStudents}/>
         </div>

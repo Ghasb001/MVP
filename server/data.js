@@ -1,6 +1,6 @@
 // //import Helpers from 'client/src/helpers.js';
 let mysql = require('mysql2');
-
+var Promise = require('promise');
 
 var connection = mysql.createConnection({
   host: 'localhost',
@@ -13,7 +13,6 @@ connection.connect(function(err) {
   if (err) {
     return console.error('error: ' + err.message);
   }
-
   console.log('Connected to the MySQL server.');
 });
 
@@ -27,6 +26,19 @@ connection.insert = function (object) {
       console.log('Inserted')
     }
   })
+}
+
+connection.retrieve = function () {
+  var query = 'SELECT * FROM Students;';
+  var array = [];
+  connection.query(query, (err, res) => {
+    if (err) {
+      console.log(query);
+    } else {
+      console.log(res)
+    }
+  })
+  return array;
 }
 
 
