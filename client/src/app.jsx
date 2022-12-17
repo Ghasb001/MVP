@@ -8,7 +8,7 @@ var App = () => {
   var cohortStudents = Helpers.students;
   var generate = function () {
     var randomName = cohortStudents[Math.floor(Math.random() * cohortStudents.length)];
-    return randomName.name;
+    return randomName.studentName;
   }
 
     return(
@@ -21,7 +21,7 @@ var App = () => {
           window.open('https://github.com/orgs/hackreactor/teams/students-rpp2209/repositories')
         }}>Cohort Repos</button>
         <div className="classRoom">
-          <StudentList list={cohortStudents} link={cohortStudents}/>
+          <StudentList list={cohortStudents} url={cohortStudents}/>
         </div>
       </div>
     );

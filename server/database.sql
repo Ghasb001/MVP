@@ -6,9 +6,9 @@ USE RPP2209;
 DROP TABLE IF EXISTS Students;
 CREATE TABLE Students (
   id int NOT NULL AUTO_INCREMENT,
-  name TEXT,
+  studentName TEXT,
   git TEXT,
-  link TEXT,
+  gitUrl TEXT,
   PRIMARY KEY(id)
 );
 
